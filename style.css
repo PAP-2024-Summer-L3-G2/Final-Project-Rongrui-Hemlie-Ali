@@ -1,8 +1,39 @@
+html {
+}
 
 
-footer {
+ 
+
+
+
+#contact-form {
+padding: 10px;
+
+}
+input {
+    margin-right: 15px;
+}
+
+    footer {
 color: rgb(0, 0, 0);
 background-color: rgb(132, 131, 131);
 padding: 15px;
 text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
