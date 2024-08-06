@@ -84,6 +84,7 @@ h2 {
     font-family: Impact;
     font-weight: normal;
     font-size: 50px;
+    text-shadow: 2px 2px 2px black;
 }
 
 p {
@@ -95,4 +96,8 @@ p {
 
 span {
     text-decoration: underline;
+}
+
+#classroom {
+    width: 100%;
 }
