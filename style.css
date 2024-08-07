@@ -178,3 +178,11 @@ span {
 .hidden {
     visibility: hidden;
 }
+
+#contact-form {
+    padding: 10px;
+}
+
+input {
+    margin-right: 15px;  
+}
