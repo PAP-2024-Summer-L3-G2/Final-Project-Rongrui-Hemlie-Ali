@@ -19,7 +19,19 @@
             </nav>
         </header>
         <main>
-            <img id="classroom" src="images/classroom.png">
+            <div id="featured">
+                <button class="featured-button" id="btn-left">&lt</button>
+                <button class="featured-button" id="btn-right">&gt</button>
+                <div class="item active" id="classroom">
+                    <img src="images/classroom.png">
+                </div>
+                <div class="item next" id="com-circle">
+                    <img src="images/community-circle.jpg">
+                </div>
+                <div class="item prev" id="empty-class">
+                    <img src="images/empty-classroom.jpg">
+                </div>
+            </div>
 
             <section id="about">
                 <h2>About Quality Education</h2>
@@ -54,5 +66,6 @@
           <p>&copy; Quality Education For All 2024. All rights reserved.</p>
         </footer>
 
+        <script src="main.js"></script>
     </body>
 </html>
