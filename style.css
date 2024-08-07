@@ -101,3 +101,10 @@ span {
 #classroom {
     width: 100%;
 }
+#contact-form {
+    padding: 10px;
+    
+    }
+    input {
+        margin-right: 15px;  
+    }
