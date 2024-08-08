@@ -64,6 +64,7 @@ h2 {
     color: #4A90E2;
     margin-top: 0;
     text-align: center;
+    font-size: 40px;
 }
 
 section {
@@ -113,4 +114,102 @@ footer p {
 
 body, header, main, footer {
     animation: fadeIn 1s ease-in-out;
+}
+
+#featured {
+    width: 70%;
+    height: 450px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: left 0.3s ease-out;
+}
+
+#classroom > img {
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+}
+
+#empty-class > img {
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+}
+
+#com-circle > img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.featured-button {
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    color: white;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    height: 25%;
+    transition: background-color 0.3s;
+}
+
+#counter {
+    z-index: 3;
+    position: absolute;
+    bottom: 0%;
+    right: 10px;
+    background-color: #4A90E2;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 15px;
+}
+
+.featured-button:hover {
+    background-color: #4A90E2;
+}
+
+#btn-left {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+#btn-right {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.item.active {
+    left: 0;
+}
+
+.item.prev {
+    left: -100%;
+}
+
+.item.next {
+    left: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#extra-padding {
+    padding-top: 20px;
 }

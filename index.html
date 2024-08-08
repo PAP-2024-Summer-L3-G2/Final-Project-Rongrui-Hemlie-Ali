@@ -10,7 +10,7 @@
     <header>
         <nav>
             <div id="menu">
-                <a><img id="logo" src="images/Placeholder.png"></a>
+                <a href="index.html"><img id="logo" src="images/Placeholder.png"></a>
                 <a href="about.html">About</a>
                 <a href="stories.html">Stories</a>
                 <a href="resources.html">Resources</a>
@@ -18,7 +18,23 @@
         </nav>
     </header>
 
-    <main>
+    <main id="extra-padding">
+        <div id="featured">
+            <button class="featured-button" id="btn-left">&lt</button>
+            <button class="featured-button" id="btn-right">&gt</button>
+            <div class="item active" id="classroom">
+                <img src="images/classroom.png">
+            </div>
+            <div class="item next" id="com-circle">
+                <img src="images/community-circle.jpg">
+            </div>
+            <div class="item prev" id="empty-class">
+                <img src="images/empty-classroom.jpg">
+            </div>
+            <p id="counter">1/3</p>
+        </div>
+
+
         <section>
             <h2>Welcome to Quality Education for All</h2>
             <p>Quality Education for All is dedicated to creating a world where every child and adult has access to the education they deserve. We focus on providing resources and support to help individuals and communities achieve their educational goals.</p>
@@ -32,5 +48,6 @@
         <p>Email us: QEFA@gmail.com</p>
         <p>&copy; Quality Education For All 2024. All rights reserved.</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
