@@ -113,7 +113,7 @@ footer p {
 }
 
 body, header, main, footer {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 #featured {
@@ -132,21 +132,11 @@ body, header, main, footer {
     transition: left 0.3s ease-out;
 }
 
-#classroom > img {
+.featured-image {
     object-fit: cover;
+    object-position: center;
     height: 100%;
-    max-width: 100%;
-}
-
-#empty-class > img {
-    object-fit: cover;
-    height: 100%;
-    max-width: 100%;
-}
-
-#com-circle > img {
-    object-fit: contain;
-    max-width: 100%;
+    width: 100%;
 }
 
 .featured-button {
@@ -222,7 +212,7 @@ body, header, main, footer {
     margin-right: auto;
     text-align: center;
     border-radius: 15px;
-    padding: 25px 0;
+    padding: 25px 0 15px 0;
 }
 
 input {
