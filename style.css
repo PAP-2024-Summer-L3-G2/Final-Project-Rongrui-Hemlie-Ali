@@ -213,3 +213,55 @@ body, header, main, footer {
 #extra-padding {
     padding-top: 20px;
 }
+
+#volunteer-form {
+    width: 70%;
+    Background-color: #4A90E2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 15px;
+    padding: 25px 0;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 8px 10px;
+    border: none;
+}
+
+#white {
+    color: white;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    background-color: #194679;
+    transition: color 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: #194679;
+}
