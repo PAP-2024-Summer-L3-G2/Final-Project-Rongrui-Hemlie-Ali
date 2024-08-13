@@ -5,8 +5,8 @@ let images = [
 ]
 let currentIndex = 0;
 let debounce = false;
-
 let interval;
+const counter = document.getElementById("counter");
 
 function createDebounce() {
     debounce = true;
@@ -22,6 +22,10 @@ function resetInterval() {
     interval = setInterval(() => {
         carouselGoNext();
     }, 5000);
+}
+
+function updateCounter() {
+    counter.textContent = `${currentIndex + 1}/${images.length}`
 }
 
 
@@ -55,6 +59,7 @@ function carouselGoPrev() {
     if (currentIndex < 0) {
         currentIndex = images.length - 1;
     }
+    updateCounter();
 }
 
 function carouselGoNext() {
@@ -87,6 +92,7 @@ function carouselGoNext() {
     if (currentIndex >= images.length) {
         currentIndex = 0;
     }
+    updateCounter();
 }
 
 const prevBtn = document.querySelector("#btn-left");
