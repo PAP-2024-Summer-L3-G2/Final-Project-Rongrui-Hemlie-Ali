@@ -255,3 +255,8 @@ textarea {
     background-color: white;
     color: #194679;
 }
+
+#resources-list > li > a {
+    text-decoration: none;
+    color: white;
+}
