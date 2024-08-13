@@ -1,12 +1,30 @@
 // I'm sowwy this looks so ugly...
+const classroom = document.getElementById("classroom");
+const comCircle = document.getElementById("com-circle");
+const emptyClass = document.getElementById("empty-class");
 
-let images = [
-    "classroom", "com-circle", "empty-class"
-]
+let images = [classroom, comCircle, emptyClass]
+
 let currentIndex = 0;
 let debounce = false;
 let interval;
 const counter = document.getElementById("counter");
+
+
+// Returns the previous and next integer of num
+function getPrevNext(num) {
+    let next = num + 1;
+    if (next >= images.length) {
+        next = 0;
+    }
+
+    let prev = num - 1;
+    if (prev < 0) {
+        prev = images.length - 1;
+    }
+    
+    return [prev, next];
+}
 
 
 function createDebounce() {
@@ -39,20 +57,11 @@ function carouselGoPrev() {
     createDebounce();
     resetInterval();
 
-    currentIndex = Math.max(Math.min(currentIndex, images.length - 1), 0);
-    let nextIndex = currentIndex + 1;
-    if (nextIndex >= images.length) {
-        nextIndex = 0;
-    }
+    const [prev, next] = getPrevNext(currentIndex);
 
-    let prevIndex = currentIndex - 1;
-    if (prevIndex < 0) {
-        prevIndex = images.length - 1;
-    }
-
-    const currentItem = document.querySelector(`#${images[currentIndex]}`);
-    const nextItem = document.querySelector(`#${images[nextIndex]}`);
-    const prevItem = document.querySelector(`#${images[prevIndex]}`);
+    const currentItem = images[currentIndex];
+    const nextItem = images[next];
+    const prevItem = images[prev];
 
     currentItem.className = "item next";
     nextItem.className = "item prev hidden";
@@ -73,20 +82,11 @@ function carouselGoNext() {
     createDebounce();
     resetInterval();
 
-    currentIndex = Math.max(Math.min(currentIndex, images.length - 1), 0);
-    let nextIndex = currentIndex + 1;
-    if (nextIndex >= images.length) {
-        nextIndex = 0;
-    }
+    const [prev, next] = getPrevNext(currentIndex);
 
-    let prevIndex = currentIndex - 1;
-    if (prevIndex < 0) {
-        prevIndex = images.length - 1;
-    }
-
-    const currentItem = document.querySelector(`#${images[currentIndex]}`);
-    const nextItem = document.querySelector(`#${images[nextIndex]}`);
-    const prevItem = document.querySelector(`#${images[prevIndex]}`);
+    const currentItem = images[currentIndex];
+    const nextItem = images[next];
+    const prevItem = images[prev];
 
     currentItem.className = "item prev";
     nextItem.className = "item active";
@@ -101,8 +101,6 @@ function carouselGoNext() {
 
 const prevBtn = document.querySelector("#btn-left");
 const nextBtn = document.querySelector("#btn-right");
-
-console.log(prevBtn);
 
 prevBtn.addEventListener("click", carouselGoPrev);
 nextBtn.addEventListener("click", carouselGoNext);
