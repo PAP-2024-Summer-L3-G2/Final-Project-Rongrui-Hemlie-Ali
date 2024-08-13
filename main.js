@@ -8,12 +8,14 @@ let debounce = false;
 let interval;
 const counter = document.getElementById("counter");
 
+
 function createDebounce() {
     debounce = true;
     debounceTimer = setTimeout(() => {
         debounce = false;
     }, 400);
 }
+
 
 function resetInterval() {
     if (interval) {
@@ -23,6 +25,7 @@ function resetInterval() {
         carouselGoNext();
     }, 5000);
 }
+
 
 function updateCounter() {
     counter.textContent = `${currentIndex + 1}/${images.length}`
@@ -61,6 +64,7 @@ function carouselGoPrev() {
     }
     updateCounter();
 }
+
 
 function carouselGoNext() {
     if (debounce == true) {
